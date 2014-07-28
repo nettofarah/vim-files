@@ -8,8 +8,6 @@ set lines=50
 if has("mac")
   set macmeta
 endif
-" make fullscreen the default
-set fullscreen
 set fuoptions=maxvert,maxhorz
 " Remove all the UI cruft
 set go=egm
@@ -40,7 +38,7 @@ function! s:initialize_font()
   if exists("&guifont")
     if has("mac")
       if g:airline_powerline_fonts
-        set guifont=Sauce\ Code\ Powerline\ Light:h15
+        set guifont=Menlo:h14
       else
         set guifont=Monaco:h15
       endif

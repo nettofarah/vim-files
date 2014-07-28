@@ -5,3 +5,15 @@ filetype off
 " initiate vundle
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
+
+autocmd BufWritePre * :%s/\s\+$//e
+set vb
+
+" Line numbers
+set nonumber
+" set number
+
+" Show relative line numbers
+set relativenumber
+set numberwidth=3
+set guipty
