@@ -1,6 +1,6 @@
 " vim: filetype=vim
 
-colorscheme Bubblegum
+colorscheme Tomorrow
 
 "if has("gui_running")
 "  set background=dark
