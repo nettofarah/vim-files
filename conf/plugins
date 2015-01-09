@@ -48,15 +48,17 @@ let g:use_default_shortcuts_for_zoom = 0
 " CtrlP settings
 
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](.git|.hg|.svn|vendor/bundle|tmp/cache|coverage|public/source_maps)$',
-  \ 'file': '\v(\.(exe|so|dll|gif|jpg|jpeg|png|svg|ico|woff|ttf|eot)|tags)$',
+  \ 'dir':  '\v[\/](.git|.hg|.svn|vendor/bundle|tmp|coverage|public/source_maps|log)$',
+  \ 'file': '\v(\.(exe|so|dll|gif|jpg|jpeg|png|svg|ico|woff|ttf|eot)|tags|log)$',
   \ }
 
 let g:ctrlp_match_window = 'bottom,order:ttb'
 let g:ctrlp_switch_buffer = 0
 let g:ctrlp_working_path_mode = 0
+let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
 
-let g:CommandTMaxFiles=22000
-let g:CommandTMaxHeight=20
-let g:CommandTInputDebounce = 50
-let g:CommandTMatchWindowReverse=1
+
+let g:expand_region_text_objects_ruby = {
+  \ 'im' :0,
+  \ 'am' :0,
+  \ }

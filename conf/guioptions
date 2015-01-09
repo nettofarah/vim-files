@@ -2,16 +2,21 @@
 
 colorscheme Tomorrow
 
-"if has("gui_running")
-"  set background=dark
-"end
+if has("gui_running")
+  "colorscheme github
+  set background=light
+end
+
+if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal"
+  set t_Co=256
+endif
 
 set number tabstop=2 sw=2 bs=2 mouse=a
 set ruler title cursorline
 " set the space from the current line when scrolling
 set scrolloff=3
 " set the colors when using terminal commands
-set noguipty
+set guipty
 " command-line completion shows a list of matches
 set wmnu
 "load the status line

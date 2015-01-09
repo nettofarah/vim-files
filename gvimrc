@@ -2,8 +2,9 @@
 "Settings for GUI
 
 " set the initial window size
-set co=160
-set lines=50
+"set co=160
+set lines=100
+
 " enabling the use of the meta key (alt/option) on the Mac
 if has("mac")
   set macmeta
@@ -38,9 +39,9 @@ function! s:initialize_font()
   if exists("&guifont")
     if has("mac")
       if g:airline_powerline_fonts
-        set guifont=Menlo:h14
+        set guifont=Menlo:h12
       else
-        set guifont=Monaco:h15
+        set guifont=Monaco:h13
       endif
     elseif has("unix")
       if &guifont == ""

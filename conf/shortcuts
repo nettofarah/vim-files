@@ -1,4 +1,4 @@
-let mapleader=","
+"let mapleader=","
 
 " vim: filetype=vim
 inoremap <expr> <C-n> pumvisible() ? '<C-n>' : '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
@@ -7,10 +7,8 @@ inoremap <expr> <C-Space> pumvisible() ? '<C-n>' : '<C-x><C-o><C-n><C-p><C-r>=pu
 " map the F2 key to open a side panel with the folder tree
 noremap <silent> <F2> :NERDTreeToggle<Return>
 
-nnoremap <silent> <Leader>t :CommandT<CR>
-noremap <C-Space> :CommandT<CR>
-
-
+noremap <C-Space> :CtrlPBuffer<CR>
+noremap <C-c>  :CtrlPBufTag<CR>
 
 " set mapping to Fugitive plugin
 noremap <F7> :Gblame<CR>
