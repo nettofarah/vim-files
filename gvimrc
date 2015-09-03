@@ -39,7 +39,7 @@ function! s:initialize_font()
   if exists("&guifont")
     if has("mac")
       if g:airline_powerline_fonts
-        set guifont=Menlo:h12
+        set guifont=Monaco:h12
       else
         set guifont=Monaco:h13
       endif

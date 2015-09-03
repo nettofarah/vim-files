@@ -6,7 +6,8 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-autocmd BufWritePre * :%s/\s\+$//e
+" disable whitespace removal temporarily
+" autocmd BufWritePre * :%s/\s\+$//e
 au BufNewFile,BufRead *.go setlocal noet ts=4 sw=4 sts=4
 au FileType go map <leader>r :!go run %<CR>
 
